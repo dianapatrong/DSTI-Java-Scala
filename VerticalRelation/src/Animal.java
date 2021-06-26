@@ -1,8 +1,5 @@
-public class Animal implements IDieable {
-    public void eat(){
-        System.out.println("yummy");
-    }
-
+public abstract class Animal implements IDieable {
+    public abstract void eat();
     public void die(){
         System.out.println("snif snif aie aie");
     }
