@@ -1,4 +1,4 @@
-public abstract class Shape {
+public abstract class Shape implements Comparable<Shape>{
     private String color;
 
     public Shape(String color){
@@ -11,4 +11,15 @@ public abstract class Shape {
     }
 
     public abstract double getArea();
+
+    @Override
+    public int compareTo(Shape t){
+        if (this.getArea() < t.getArea()){
+            return -1;
+        }
+        else if (this.getArea() > t.getArea()){
+            return 1;
+        }
+        return 0;
+    }
 }
