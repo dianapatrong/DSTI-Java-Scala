@@ -1,10 +1,7 @@
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
-public class Circle implements KeyListener, MouseListener {
+public class Circle implements KeyListener, MouseListener, MouseMotionListener {
     private int x;
     private int y;
     private int radius;
@@ -85,5 +82,17 @@ public class Circle implements KeyListener, MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
 
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        this.x = e.getX();
+        this.y = e.getY();
+        this.support.repaint();
     }
 }

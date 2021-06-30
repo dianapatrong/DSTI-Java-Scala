@@ -14,6 +14,7 @@ public class MyCanva extends Canvas {
         this.myCircle.addSurface(this);
         this.addKeyListener(this.myCircle);
         this.addMouseListener(this.myCircle);
+        this.addMouseMotionListener(this.myCircle);
     }
 
     @Override
