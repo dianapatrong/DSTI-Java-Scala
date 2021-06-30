@@ -11,6 +11,8 @@ public class MyCanva extends Canvas {
 
     public void addCircle(Circle c){
         this.myCircle = c;
+        this.myCircle.addSurface(this);
+        this.addKeyListener(this.myCircle);
     }
 
     @Override
