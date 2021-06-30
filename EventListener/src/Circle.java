@@ -1,8 +1,10 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class Circle implements KeyListener {
+public class Circle implements KeyListener, MouseListener {
     private int x;
     private int y;
     private int radius;
@@ -53,6 +55,35 @@ public class Circle implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
+
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        int red= (int) (Math.random()*255);
+        int blue=(int) (Math.random()*255);
+        int green=(int) (Math.random()*255);
+        this.color = new Color(red, blue, green);
+        this.support.repaint();
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
 
     }
 }

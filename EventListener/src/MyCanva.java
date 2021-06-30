@@ -13,6 +13,7 @@ public class MyCanva extends Canvas {
         this.myCircle = c;
         this.myCircle.addSurface(this);
         this.addKeyListener(this.myCircle);
+        this.addMouseListener(this.myCircle);
     }
 
     @Override
